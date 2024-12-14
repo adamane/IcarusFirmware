@@ -1,0 +1,13 @@
+if SHIELD_ICARUS_LEFT
+
+config ZMK_KEYBOARD_NAME
+  default "icarus"
+config ZMK_SPLIT_ROLE_CENTRAL
+  default y
+endif
+
+if SHIELD_ICARUS_LEFT || SHIELD_ICARUS_RIGHT
+
+config ZMK_SPLIT
+  default y
+endif
