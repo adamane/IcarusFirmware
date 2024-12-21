@@ -9,18 +9,14 @@
         // ========== Layer 0: DEFAULT ==========
         default_layer {
             bindings = <
-                // Row 1 (10 keys): q w e r t  z u i o p
                 &kp Q   &kp W   &kp E   &kp R   &kp T
                 &kp Z   &kp U   &kp I   &kp O   &kp P
 
-                // Row 2 (10 keys): a(ctrl) s(shift) d(super) f(alt) g  h(alt) j(super) k(shift) l(ctrl) ;
                 &mt LCTRL A  &mt LSHFT S  &mt LGUI D   &mt LALT F  &kp G
                 &mt LALT H   &mt LGUI J  &mt LSHFT K  &mt LCTRL L &kp SEMI
 
-                // Row 3 (10 keys): y x c v b  n m , . /
                 &kp Y &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH
 
-                // Thumb row (6 keys): mo1 space mo2 mo2 mo3
                 &mo 1 &kp SPACE &mo 2  &mo 2 &mo 3 &none
             >;
         };
@@ -28,18 +24,14 @@
         // ========== Layer 1: NAVIGATION ==========
         layer1 {
             bindings = <
-                // Row 1: keep mostly normal except p -> backslash
                 &kp Q   &kp W   &kp E   &kp R   &kp T
                 &kp Z   &kp U   &kp I   &kp O   &kp BSLH
 
-                // Row 2: keep left side home row mods, right side -> arrow keys
                 &mt LCTRL A  &mt LSHFT S  &mt LGUI D   &mt LALT F  &kp G
                 &kp LEFT     &kp DOWN    &kp UP       &kp RIGHT   &kp RET
 
-                // Row 3: unchanged or adapt as needed
                 &kp Y &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH
 
-                // Thumb row same positions
                 &mo 1 &kp SPACE &mo 2  &mo 2 &mo 3 &none
             >;
         };
@@ -47,23 +39,15 @@
         // ========== Layer 2: SYMBOLS ==========
         layer2 {
             bindings = <
-                // Row 1: u->{, i->}, o->~, (others left alone or adopt as desired)
                 &kp Q   &kp W    &kp E     &kp R     &kp T
-                &kp Z   &kp LCBR &kp RCBR  &kp O &kp P
+                &kp Z &kp LCBR &kp RCBR &kp TILDE &kp P
 
-                // Row 2: 
-                // a->!, s->@, d->#, f->$, g->%, h->-, j->(, k->), l->*, ;->unchanged
                 &kp EXCL   &kp AT    &kp HASH   &kp DLR   &kp PERC
                 &kp MINUS  &kp LPAREN &kp RPAREN &kp ASTERISK &kp SEMI
 
-                // Row 3:
-                // y->^, x->&, m->[, ,->], .->=  (others left alone or adopt as needed)
-                &kp CARET &kp AMPS &kp C &kp V &kp B    
+                &kp CARET &kp AMPS &kp C &kp V &kp B
                 &kp N &kp LBKT &kp RBKT &kp EQL &kp FSLH
 
-                // Thumb row:
-                // The "middle" thumb keys on each side = Shift
-                // So: &mo 1, LSHFT, &mo 2, LSHFT, &mo 3
                 &mo 1 &kp LSHFT &none &none &kp LSHFT &mo 3
             >;
         };
@@ -72,57 +56,17 @@
 
         layer3 {
             bindings = <
-            /* Row 1 (10 keys):
-             * q->9, w->8, e->7, plus normal placeholders for r/t/z/u/i,
-             * o is left normal, p is forget devices.
-             */
-            &kp N9  &kp N8  &kp N7  &kp R   &kp T
-            &kp Z   &kp U   &kp I   &kp O   &bt BT_CLR
+                &kp N9  &kp N8  &kp N7  &kp R   &kp T
+                &kp Z   &kp U   &kp I   &kp O   &bt BT_CLR
 
-            /* Row 2 (10 keys):
-             * a->6, s->5, d->4,
-             * j->pairing, k->dev1, l->dev2, ;->dev3
-             */
-            &kp N6  &kp N5  &kp N4  &kp F   &kp G
-            &kp H   &bt BT_PAIR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+                &kp N6  &kp N5  &kp N4  &kp F   &kp G
+                &kp H   &bt BT_PAIR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
 
-            /* Row 3 (10 keys):
-             * y->3, x->2, c->1, v->0,
-             * remaining keys are placeholders
-             */
-            &kp N3  &kp N2  &kp N1  &kp N0  &kp B
-            &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH
+                &kp N3  &kp N2  &kp N1  &kp N0  &kp B
+                &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH
 
-            /* Thumb row (5 keys): same as your default usage
-             * mo1 space mo2  mo2 mo3
-             */
-            &mo 1 &kp SPACE &mo 2 &mo 2 &mo 3 &none
-        >;
+                &mo 1 &kp SPACE &mo 2 &mo 2 &mo 3 &none
+            >;
         };
     };
 };
-    // 1 -> nav
-    // 2 -> symbols
-    // 3 -> numpad + bt
-
-    // default
-    // q w e r t z u i o p
-    // a(ctrl) s(shift) d(super) f(alt) g h(alt) j(super) k(shift) l(ctrl) ;
-    // y x c v b n m , . /
-    // mo1 space mo2  mo2 mo3 
-
-    // symbols
-    // u -> {, i -> }, j -> (, k -> ), m -> [, "," -> ], l -> *, o -> ~, "." -> =, h -> -
-    // a -> !, s -> @, d -> #, f -> $, g -> %, y -> ^, x -> &
-    // make middle thumb keys on both sides on this layer to shift.
-
-    // navigation
-    // keep left home row mods
-    // h -> left, j -> down, k -> up, l -> right, ; -> enter, p -> bshl
-
-    // numad + bt:
-    // q->9 w->8 e->7
-    // a->6 s->5 d->4
-    // y->3 x->2 c->1 v->0
-    // bt functionality somewhere on the right side
-    
