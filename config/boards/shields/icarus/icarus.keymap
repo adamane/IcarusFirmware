@@ -49,7 +49,7 @@
             bindings = <
                 // Row 1: u->{, i->}, o->~, (others left alone or adopt as desired)
                 &kp Q   &kp W    &kp E     &kp R     &kp T
-                &kp Z   &kp LCBR &kp RCBR  &kp TILDE &kp P
+                &kp Z   &kp LCBR &kp RCBR  &kp O &kp P
 
                 // Row 2: 
                 // a->!, s->@, d->#, f->$, g->%, h->-, j->(, k->), l->*, ;->unchanged
@@ -58,7 +58,8 @@
 
                 // Row 3:
                 // y->^, x->&, m->[, ,->], .->=  (others left alone or adopt as needed)
-                &kp CARET &kp AMPS &kp C &kp V &kp B    &kp N &kp LBKT &kp RBKT &kp EQL &kp FSLH
+                &kp CARET &kp AMPS &kp C &kp V &kp B    
+                &kp N &kp LBKT &kp RBKT &kp EQL &kp FSLH
 
                 // Thumb row:
                 // The "middle" thumb keys on each side = Shift
