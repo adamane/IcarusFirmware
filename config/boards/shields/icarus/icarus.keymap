@@ -63,7 +63,7 @@
                 // Thumb row:
                 // The "middle" thumb keys on each side = Shift
                 // So: &mo 1, LSHFT, &mo 2, LSHFT, &mo 3
-                &mo 1 &kp LSHFT &none 2 &none &kp LSHFT &mo 3
+                &mo 1 &kp LSHFT &none &none &kp LSHFT &mo 3
             >;
         };
 
