@@ -3,6 +3,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -12,12 +22,12 @@
                 &kp Q   &kp W   &kp E   &kp R   &kp T
                 &kp Z   &kp U   &kp I   &kp O   &kp P
 
-                &mt LCTRL A  &mt LSHFT S  &mt LGUI D   &mt LALT F  &kp G
-                &mt LALT H   &mt LGUI J  &mt LSHFT K  &mt LCTRL L &kp SEMI
+                &hm LCTRL A  &hm LSHFT S  &hm LGUI D   &hm LALT F  &kp G
+                &hm LALT H   &hm LGUI J  &hm LSHFT K  &hm LCTRL L &kp SEMI
 
                 &kp Y &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH
 
-                &mo 1 &kp SPACE &mo 3  &mo 3 &mo 3 &none
+                &mo 1 &kp SPACE &mo 2  &mo 2 &mo 3 &none
             >;
         };
 
@@ -27,15 +37,30 @@
                 &kp Q   &kp W   &kp E   &kp R   &kp T
                 &kp Z   &kp U   &kp I   &kp O   &kp BSLH
 
-                &mt LCTRL A  &mt LSHFT S  &mt LGUI D   &mt LALT F  &kp G
+                &hm LCTRL A  &hm LSHFT S  &hm LGUI D   &hm LALT F  &kp G
                 &kp LEFT     &kp DOWN    &kp UP       &kp RIGHT   &kp RET
 
                 &kp Y &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH
 
-                &mo 1 &kp SPACE &mo 3  &mo 3 &mo 3 &none
+                &mo 1 &kp SPACE &mo 2  &mo 2 &mo 3 &none
             >;
         };
 
+        // ========== Layer 2: SYMBOLS ==========
+        layer2 {
+            bindings = <
+                &kp Q &kp W    &kp E    &kp R     &kp T
+                &kp Z &kp LCBR &kp RCBR &kp TILDE &kp P
+
+                &kp EXCL   &kp AT    &kp HASH   &kp DLR   &kp PERC
+                &kp MINUS  &kp LPAREN &kp RPAREN &kp ASTERISK &kp SEMI
+
+                &kp CARET &kp AMPS &kp C &kp V &kp B
+                &kp N &kp LBKT &kp RBKT &kp EQL &kp FSLH
+
+                &mo 1 &kp LSHFT &none &none &kp LSHFT &mo 3
+            >;
+        };
 
         // ========== Layer 3: NUMPAD + BT ==========
 
@@ -50,7 +75,7 @@
                 &kp N3  &kp N2  &kp N1  &kp N0  &kp B
                 &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH
 
-                &mo 1 &kp SPACE &mo 3 &mo 3 &mo 3 &none
+                &mo 1 &kp SPACE &mo 2 &mo 2 &mo 3 &none
             >;
         };
     };
