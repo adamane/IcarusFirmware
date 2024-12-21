@@ -50,13 +50,13 @@
         layer2 {
             bindings = <
                 &kp Q &kp W    &kp E    &kp R     &kp T
-                &kp Z &kp LCBR &kp RCBR &kp TILDE &kp P
+                &kp Z &kp LBRC &kp RBRC &kp TILDE &kp P
 
-                &kp EXCL   &kp AT    &kp HASH   &kp DLR   &kp PERC
-                &kp MINUS  &kp LPAREN &kp RPAREN &kp ASTERISK &kp SEMI
+                &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PERCENT
+                &kp MINUS  &kp LPAR &kp RPAR &kp ASTERISK &kp SEMI
 
                 &kp CARET &kp AMPS &kp C &kp V &kp B
-                &kp N &kp LBKT &kp RBKT &kp EQL &kp FSLH
+                &kp N &kp LBKT &kp RBKT &kp EQUAL &kp FSLH
 
                 &mo 1 &kp LSHFT &none &none &kp LSHFT &mo 3
             >;
