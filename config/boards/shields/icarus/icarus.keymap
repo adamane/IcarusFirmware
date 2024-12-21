@@ -40,7 +40,7 @@
         layer2 {
             bindings = <
                 &kp Q   &kp W    &kp E     &kp R     &kp T
-    &kp Z &kp LCBR &kp RCBR &kp TILDE &kp P
+    &kp Z &kp LCBR &kp RCBR &kp TILDE &k1 P
 
                 &kp EXCL   &kp AT    &kp HASH   &kp DLR   &kp PERC
                 &kp MINUS  &kp LPAREN &kp RPAREN &kp ASTERISK &kp SEMI
