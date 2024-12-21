@@ -3,6 +3,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -12,8 +21,8 @@
                 &kp Q   &kp W   &kp E   &kp R   &kp T
                 &kp Z   &kp U   &kp I   &kp O   &kp P
 
-                &mt LCTRL A  &mt LSHFT S  &mt LGUI D   &mt LALT F  &kp G
-                &mt LALT H   &mt LGUI J  &mt LSHFT K  &mt LCTRL L &kp SEMI
+                &bhm LCTRL A  &bhm LSHFT S  &bhm LGUI D   &bhm LALT F  &kp G
+                &bhm LALT H   &bhm LGUI J  &bhm LSHFT K  &bhm LCTRL L &kp SEMI
 
                 &kp Y &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH
 
@@ -27,7 +36,7 @@
                 &kp Q   &kp W   &kp E   &kp R   &kp T
                 &kp Z   &kp U   &kp I   &kp O   &kp BSLH
 
-                &mt LCTRL A  &mt LSHFT S  &mt LGUI D   &mt LALT F  &kp G
+                &bhm LCTRL A  &bhm LSHFT S  &bhm LGUI D   &bhm LALT F  &kp G
                 &kp LEFT     &kp DOWN    &kp UP       &kp RIGHT   &kp RET
 
                 &kp Y &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH
