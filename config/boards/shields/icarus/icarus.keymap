@@ -17,7 +17,7 @@
 
     symbols_layer {
       bindings = <
-        &kp ESC &none &none &none &none &kp TILDE &kp LEFT_BRACE &kp RIGHT_BRACE &kp ASTERISK &kp BACKSPACE 
+        &kp ESC &none &none &none &none &kp GRAVE &kp LEFT_BRACE &kp RIGHT_BRACE &kp ASTERISK &kp BACKSPACE 
         &kp TAB &sk LEFT_CONTROL &sk LEFT_ALT &none &none &kp EQUAL &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AT_SIGN &kp RETURN 
         &kp LEFT_SHIFT &none &none &none &none &kp MINUS &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp EXCLAMATION &kp SINGLE_QUOTE
         &none &none &none &none &none &none 
@@ -27,7 +27,7 @@
     nav_layer {
       bindings = <
         &none &none &none &none &none &none &none &none &none &none
-        &none &none &none &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none 
+        &kp BSLH &kp AMPS &kp HASH &kp DOLLAR &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none 
         &none &none &none &none &none &none &none &none &none &none 
         &none &none &none &none &none &none 
       >;
