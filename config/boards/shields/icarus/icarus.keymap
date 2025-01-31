@@ -20,7 +20,7 @@
         &kp ESC &none &none &none &none &kp GRAVE &kp LEFT_BRACE &kp RIGHT_BRACE &kp ASTERISK &kp BACKSPACE 
         &kp TAB &sk LEFT_CONTROL &sk LEFT_ALT &none &none &kp EQUAL &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AT_SIGN &kp RETURN 
         &kp LEFT_SHIFT &none &none &none &none &kp MINUS &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp EXCLAMATION &kp SINGLE_QUOTE
-        &none &none &none &none &none &none 
+        &none &none &none ALT &none &none 
       >;
     };
 
@@ -36,7 +36,7 @@
     numpad_layer {
       bindings = <
         &kp NUMBER_9 &kp NUMBER_8 &kp NUMBER_7 &none &none &bt BT_CLR &none &none &none &none 
-        &kp NUMBER_6 &kp NUMBER_5 &kp NUMBER_4 &none &none &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &kp LEFT_SHIFT 
+        &kp NUMBER_6 &kp NUMBER_5 &kp NUMBER_4 ESC &none &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &kp LEFT_SHIFT 
         &kp NUMBER_3 &kp NUMBER_2 &kp NUMBER_1 &kp NUMBER_0 &none &none &none &none &none &none 
         &none &none &none &none &none &none 
       >;
