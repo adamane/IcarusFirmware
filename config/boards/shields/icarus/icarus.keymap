@@ -29,7 +29,7 @@
         &none &none &none &none &none &none &none &none &none &none
         &kp BSLH &kp AMPS &kp HASH &kp DOLLAR &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
         &none &none &none &none &none &none &none &none &none &none
-        &none &none &kp LSHIFT &kp LSHIFT &kp LALT &none
+        &none &none &kp LSHIFT &kp LSHIFT &none &none
       >;
     };
 
